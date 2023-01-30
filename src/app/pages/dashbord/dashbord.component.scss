@@ -1,0 +1,128 @@
+@import "../../../theme/rem-calc.scss";
+
+:host {
+  .approve-count {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: remc(24);
+    padding-top: remc(50);
+    background-color: var(--light-color);
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background-color: var(--light-color);
+    gap: remc(10);
+    padding-top: remc(24);
+    padding-bottom: remc(24);
+    word-break: break-all;
+
+    .card-container {
+      width: 40vw;
+      padding: remc(12);
+      box-shadow: 0 remc(3) remc(10) rgb(0 0 0 / 0.2);
+      border-radius: remc(10);
+      margin-top: remc(24);
+      margin-bottom: remc(12);
+      background-color: var(--white);
+      @media only screen and (min-width: 768px) {
+        width: 20vw;
+      }
+      .card-header {
+        font-size: remc(24);
+        text-align: center;
+        margin-bottom: remc(12);
+        padding: remc(5);
+      }
+
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .img-card {
+          width: 40vw;
+          height: 40vw;
+          padding-bottom: remc(12);
+          border-radius: remc(12) remc(12) 0 0;
+
+          @media only screen and (min-width: 768px) {
+            width: 20vw;
+            height: 20vw;
+          }
+        }
+
+        .card-chips {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 7vw;
+          padding: remc(5);
+          background: #e2e2e2;
+          text-align: left;
+          text-transform: capitalize;
+          border-radius: remc(12);
+          margin-bottom: remc(12);
+
+          @media only screen and (max-width: 768px) {
+            width: 22vw;
+          }
+        }
+        .card-address {
+          width: 90%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: remc(12);
+          text-transform: capitalize;
+          background: var(--gray);
+          border-radius: remc(12);
+        }
+
+        .card-description {
+          font-size: remc(16);
+          margin-top: remc(12);
+          background: var(--gray);
+          border-radius: remc(12);
+          padding: remc(12);
+          font-weight: 500;
+          text-align: left;
+        }
+
+        .card-footer {
+          font-size: remc(18);
+          margin-top: remc(12);
+
+          .btn-approved {
+            display: flex;
+            margin-top: remc(5);
+            align-items: center;
+            justify-content: center;
+            width: 12vw;
+            height: auto;
+            padding: 1vw 3vw 1vw 3vw;
+            border-radius: remc(12);
+            background: var(--success);
+            color: var(--white);
+            font-weight: 500;
+            cursor: pointer;
+
+            @media only screen and (max-width: 768px) {
+              width: 33vw;
+            }
+
+            &._denied {
+              background-color: var(--error);
+            }
+          }
+        }
+      }
+    }
+  }
+}

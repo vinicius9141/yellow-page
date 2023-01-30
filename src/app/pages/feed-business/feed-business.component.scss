@@ -1,0 +1,91 @@
+@import "../../../theme/rem-calc.scss";
+
+:host {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: remc(10);
+    padding-top: remc(24);
+    padding-bottom: remc(24);
+    word-break: break-all;
+
+    .card-container {
+      width: 40vw;
+      padding: 12px;
+      box-shadow: 0 remc(3) remc(10) rgb(0 0 0 / 0.2);
+      border-radius: remc(10);
+      margin-top: remc(24);
+      margin-bottom: remc(12);
+      background-color: var(--white);
+
+      @media only screen and (min-width: 768px) {
+        width: 20vw;
+      }
+      .card-header {
+        font-size: remc(24);
+        text-align: center;
+        margin-bottom: remc(12);
+        padding: remc(5);
+      }
+
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .img-card {
+          width: 40vw;
+          height: 40vw;
+          padding-bottom: remc(12);
+          border-radius: remc(12) remc(12) 0 0;
+
+          @media only screen and (min-width: 768px) {
+            width: 20vw;
+            height: 20vw;
+          }
+        }
+
+        .card-chips {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 7vw;
+          padding: remc(5);
+          background: #e2e2e2;
+          text-align: left;
+          text-transform: capitalize;
+          border-radius: remc(12);
+
+          @media only screen and (max-width: 768px) {
+            width: 22vw;
+          }
+        }
+
+        .card-description {
+          font-size: remc(14);
+          margin-top: remc(12);
+          text-align: left;
+        }
+
+        .card-footer {
+          font-size: remc(18);
+          margin-top: remc(12);
+
+          .btn-show-more {
+            width: auto;
+            height: auto;
+            padding: 1vw 6vw 1vw 6vw;
+            border-radius: remc(12);
+            background: var(--dark-blue);
+            color: var(--white);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

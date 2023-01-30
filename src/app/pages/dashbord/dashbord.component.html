@@ -1,0 +1,32 @@
+<div class="approve-count">
+  {{ countRegistrations }} Cadastro(s) para aprovação
+</div>
+<div class="container">
+  <app-loader *ngIf="isLoading"></app-loader>
+  <div
+    class="card-container"
+    *ngFor="let user of usersForApprove; let i = index"
+  >
+    <div class="card-header">{{ user.name }}</div>
+    <div class="card-body">
+      <img class="img-card" src="../../../assets/bg/ak.jpg" alt="" />
+      <div class="card-chips">
+        {{ user.typeBussiness }}
+      </div>
+      <div class="card-address">
+        <div>{{ user.address }}, {{ user.number }}</div>
+
+        <div>{{ user.neighborhood }}</div>
+      </div>
+      <div class="card-description">
+        {{ user.description }}
+      </div>
+      <div class="card-footer">
+        <button class="btn-approved" (click)="approveRegister(user.id)">
+          Aprovar
+        </button>
+        <button class="btn-approved _denied">Negar</button>
+      </div>
+    </div>
+  </div>
+</div>

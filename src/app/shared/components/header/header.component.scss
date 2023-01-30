@@ -1,0 +1,28 @@
+@import "../../../../theme/rem-calc.scss";
+
+:host {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-blue);
+    color: var(--white);
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      li {
+        font-size: remc(18);
+        padding: remc(12);
+        cursor: pointer;
+
+        &:hover {
+          color: var(--gray);
+          text-decoration: dashed;
+        }
+      }
+    }
+  }
+}

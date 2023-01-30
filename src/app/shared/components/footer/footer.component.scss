@@ -1,0 +1,16 @@
+@import "../../../../theme/rem-calc.scss";
+:host {
+  .container {
+    .content {
+      position: initial;
+      bottom: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: remc(30);
+      background-color: var(--dark-blue);
+      padding: remc(10);
+      color: var(--white);
+    }
+  }
+}

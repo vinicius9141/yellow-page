@@ -1,0 +1,56 @@
+<div class="container">
+  <form [formGroup]="formRegister" class="form-register">
+    <label for="name">Nome do estabelecimento:</label>
+    <input
+      formControlName="name"
+      class="input-form"
+      [placeholder]="formRegister.get('name')?.value"
+    />
+
+    <label for="address">Endereço:</label>
+    <input
+      formControlName="address"
+      [placeholder]="formRegister.get('address')?.value"
+      class="input-form"
+    />
+
+    <label for="neighborhood">Bairro:</label>
+    <input
+      formControlName="neighborhood"
+      [placeholder]="formRegister.get('neighborhood')?.value"
+      class="input-form"
+    />
+    <label for="number">Numero:</label>
+    <input
+      formControlName="number"
+      [placeholder]="formRegister.get('number')?.value"
+      class="input-form"
+    />
+    <label for="description">Uma breve descrição:</label>
+    <input
+      formControlName="description"
+      [placeholder]="formRegister.get('description')?.value"
+      class="input-form"
+    />
+    <label for="typeBussiness">Tipo de estabelecimento:</label>
+
+    <select formControlName="typeBussiness" class="input-form">
+      <option value="" selected disabled hidden>
+        Escolha o tipo do seu estabelecimento
+      </option>
+      <option value="pousada">Pousada</option>
+      <option value="hotel">Hotel</option>
+      <option value="restaurante">Restaurante</option>
+      <option value="bar">Bar</option>
+    </select>
+
+    <button
+      (click)="sendForm()"
+      class="send-btn"
+      [disabled]="!formRegister.valid"
+      [class._disabled]="!formRegister.valid"
+    >
+      Enviar para aprovação <mat-icon class="btn-icon">send</mat-icon>
+    </button>
+  </form>
+</div>

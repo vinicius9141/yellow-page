@@ -1,0 +1,24 @@
+<button>clica</button>
+<div class="container">
+  <app-loader *ngIf="isLoading"></app-loader>
+  <div class="card-container" *ngFor="let user of allUsers; let i = index">
+    <div class="card-header">{{ user.name }}</div>
+    <div class="card-body">
+      <img class="img-card" src="./assets/bg/ak.jpg" alt="" />
+      <div class="card-chips">
+        {{ user.typeBussiness }}
+      </div>
+      <div class="card-description">
+        {{ user.description }}
+      </div>
+      <div class="card-footer">
+        <button class="btn-show-more" (click)="showMore(i)">Ver Mais</button>
+      </div>
+    </div>
+  </div>
+</div>
+<app-pop-up
+  (showPopUpEmitter)="closePopUp()"
+  [popUpData]="popUpData"
+  [showPopUp]="showPopUp"
+></app-pop-up>

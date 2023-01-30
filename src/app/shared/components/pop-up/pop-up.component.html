@@ -1,0 +1,19 @@
+<div class="container" *ngIf="showPopUp">
+  <div class="layer">
+    <div class="popup">
+      <div class="close" (click)="closeModal()">x</div>
+      <h1 class="title">{{ popUpData.title }}</h1>
+      <p>
+        Horario de funcionamento:{{ popUpData.openingHours }} ás
+        {{ popUpData.closingHours }} <br />
+        {{ popUpData.address }} <br />
+        Telefone: {{ popUpData.phone }}
+      </p>
+      <button
+        class="button"
+        [type]="'button'"
+        [classList]="'btn-primary'"
+      ></button>
+    </div>
+  </div>
+</div>

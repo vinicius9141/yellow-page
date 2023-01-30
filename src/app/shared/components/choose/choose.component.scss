@@ -1,0 +1,46 @@
+@import "../../.././../theme/rem-calc.scss";
+
+:host {
+  .container {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    padding: remc(12);
+
+    .choose-card {
+      background: var(--dark-blue-700);
+      width: remc(350);
+      max-width: remc(400);
+      height: auto;
+      padding: remc(15);
+      border-radius: remc(12);
+
+      .title {
+        font-size: remc(24);
+        text-align: center;
+        color: var(--white);
+      }
+    }
+
+    .btns-choose-wrap {
+      display: flex;
+      flex-direction: column;
+      padding-top: remc(40);
+
+      .btn-choose {
+        background: var(--dark-blue-300);
+        padding: remc(12);
+        margin-bottom: remc(12);
+        color: var(--white);
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+          background: var(--black);
+          padding: remc(17);
+        }
+      }
+    }
+  }
+}
